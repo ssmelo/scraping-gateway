@@ -1,0 +1,31 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/scraping/users",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/scraping/users/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/users/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8080
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5003"
+  }
+}
